@@ -1,4 +1,4 @@
-# Mask-RCNN Based Image Segmentaion on Human Sperm Head Morphological Quality Classification
+# Mask-RCNN Based Image Segmentation on Human Sperm Head Morphological Quality Classification
 
 <p align="center">
     <img src="https://cdn-icons-png.flaticon.com/512/3736/3736963.png" alt="sperm" width="250">
