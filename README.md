@@ -1,8 +1,8 @@
 # Mask-RCNN Based Image Segmentaion on Human Sperm Head Morphological Quality Classification
 
-<div style="text-align:center">
-    <img src="https://cdn-icons-png.flaticon.com/512/3736/3736963.png" alt="Raisins" width='250'>
-</div>
+<p align="center">
+    <img src="https://cdn-icons-png.flaticon.com/512/3736/3736963.png" alt="sperm" width="250">
+</p>
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -16,7 +16,7 @@ Sperm, the male reproductive cell, fertilizes the female reproductive cell to cr
 ## Methodology<a name="methodology"></a>
 
 <p align="center">
-  <img src="Resources/Methodology.png" alt="methodology" width="400">
+  <img src="Resources/Methodology.png" alt="methodology" width="350">
 </p>
 
 ### Dataset Gathering and Preparation
@@ -27,19 +27,18 @@ To further suplement the lack of sperm images the [second public dataset](https:
 
 The desired dataset contained 1300 images which consisted of 2 classes (650 good sperm morphological quality and 650 bad sperm morphological quality). The training dataset was split into an 80%/20% ratio for training and validation set.
 
-<div style="display: flex; justify-content: center;">
-  <div style="margin: 5px;">
-    <img src="Resources/Good Dataset.png" alt="good mq" width="300">
-  </div>
-  <div style="margin: 5px;">
-    <img src="Resources/Bad Dataset.png" alt="bad mq" width="300">
-  </div>
-</div>
+<p align="center">
+    <img src="Resources/Good Dataset.png" alt="good mq" width="250">
+</p>
+
+<p align="center">
+    <img src="Resources/Bad Dataset.png" alt="bad mq" width="250">
+</p>
 
 ### Dataset Annotation
 
 <p align="center">
-  <img src="Resources/Data Annotation.png" alt="anno" width="400">
+  <img src="Resources/Data Annotation.png" alt="anno" width="350">
 </p>
 
 The software labelme was used to annotate and label the datasets. A bounding shape was constructed on the sperm head and was labeled as Good Morphological Quality or Bad Morphological Quality and a corresponding json file of the annotation is automatically saved.
@@ -58,39 +57,36 @@ Mask R-CNN as the deep learning model. The selected backbone was ResNet-101 whic
 ## Model Evaluation<a name="model-evaluation"></a>
 
 <p align="center">
-  <img src="Resources/Model Training and Evaluation.png" alt="te" width="550">
+  <img src="Resources/Model Training and Evaluation.png" alt="te" width="450">
 </p>
 
 It can be observed that the training loss is lower than the validation loss and the gap between the validation loss narrows over as each epoch passes. However, as the training loss continues to get lower in value the validation loss continues to spike between high and low values regularly. This variability may be attributed to the weights and values changing as the training progresses.
 
 <p align="center">
-  <img src="Resources/Model Accuracy Evaluation.png" alt="acc" width="550">
+  <img src="Resources/Model Accuracy Evaluation.png" alt="acc" width="450">
 </p>
 
 The mAP serves as a representation of dataset validation accuracy. Across 300 model evaluations, there's notable variance in mAP, likely due to changing model weights during training. After around 200-300 epochs, mAP tends to stabilize, ranging between 0.60 and 0.89. The highest mAP, 0.8908 (89.1%), was achieved by the 283rd model which was selected for testing and inference.
 
 ## Inferencing <a name="inferencing"></a>
 
-<div style="display: flex; justify-content: center;">
-  <div style="margin: 5px;">
-    <img src="Resources/Good Inferencing.png" alt="inf good" width="411">
-  </div>
-  <div style="margin: 5px;">
+<p align="center">
+    <img src="Resources/Good Inferencing.png" alt="inf good" width="400">
+</p>
+
+<p align="center">
     <img src="Resources/Bad Inferencing.png" alt="inf bad" width="400">
-  </div>
-</div>
+</p>
 
 Inferencing and testing were done using the 283rd model and is applied to images from the [SMIDS dataset](https://data.mendeley.com/datasets/6xvdhc9fyb/1). 5 images are selected from the normal sperm folder to be used for classification of good morphological quality and 5 images are selected from the abnormal sperm folder to be used for classification of bad morphological quality sperm respectively.
 
+<p align="center">
+    <img src="Resources/Good Inferencing Results.png" alt="inf good res" width="400">
+</p>
 
-<div style="display: flex; justify-content: center;">
-  <div style="margin: 5px;">
-    <img src="Resources/Good Inferencing Results.png" alt="inf good" width="300">
-  </div>
-  <div style="margin: 5px;">
-    <img src="Resources/Bad Inferencing Results.png" alt="inf bad" width="304">
-  </div>
-</div>
+<p align="center">
+    <img src="Resources/Bad Inferencing Results.png" alt="inf bad res" width="400">
+</p>
 
 The model was able to classify the sperm image as good morphological quality and bad morphological quality in 5 out of 5 tests.
 
